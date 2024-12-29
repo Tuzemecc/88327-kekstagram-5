@@ -1,3 +1,5 @@
+import {showFullScreenImage} from './fullscreen.js';
+
 const pictureTemplate = document.querySelector('#picture').content.querySelector('.picture');
 const picturesList = document.querySelector('.pictures');
 
@@ -10,6 +12,7 @@ function pictureAdd(item){
   const pictureImg = picture.querySelector('.picture__img');
   pictureImg.setAttribute('src', item.url);
   pictureImg.setAttribute('alt', item.description);
+  picture.addEventListener("click", showFullScreenImage);
   picture.querySelector('.picture__likes').textContent = item.likes;
   picture.querySelector('.picture__comments').textContent = item.comments.length;
   picturesList.appendChild(picture);
