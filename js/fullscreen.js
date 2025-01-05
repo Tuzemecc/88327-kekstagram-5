@@ -31,7 +31,7 @@ function closeFullScreenImage(){
 }
 
 function showComments(comments){
-  comments.forEach(comment => {
+  comments.forEach((comment) => {
     const commentItem = bigPictureCommentTemplate.cloneNode(true);
     commentItem.querySelector('.social__picture').setAttribute('src', comment.avatar);
     commentItem.querySelector('.social__picture').setAttribute('alt', comment.name);
@@ -42,5 +42,7 @@ function showComments(comments){
 
 
 function clearComments(){
-  bigPictureComments.querySelectorAll('*').forEach(n => {n.remove()});
+  bigPictureComments.querySelectorAll('*').forEach((n) => {
+      n.remove();
+  });
 }
