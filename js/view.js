@@ -13,7 +13,7 @@ function pictureAdd(item){
   picture.setAttribute('id', item.id);
   pictureImg.setAttribute('src', item.url);
   pictureImg.setAttribute('alt', item.description);
-  picture.addEventListener("click", showFullScreenImage);
+  picture.addEventListener('click', showFullScreenImage);
   picture.querySelector('.picture__likes').textContent = item.likes;
   picture.querySelector('.picture__comments').textContent = item.comments.length;
   picturesList.appendChild(picture);

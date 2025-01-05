@@ -43,6 +43,6 @@ function showComments(comments){
 
 function clearComments(){
   bigPictureComments.querySelectorAll('*').forEach((n) => {
-      n.remove();
+    n.remove();
   });
 }
