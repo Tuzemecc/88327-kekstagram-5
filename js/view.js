@@ -10,6 +10,7 @@ export function picturesSetup(data){
 function pictureAdd(item){
   const picture = pictureTemplate.cloneNode(true);
   const pictureImg = picture.querySelector('.picture__img');
+  picture.setAttribute('id', item.id);
   pictureImg.setAttribute('src', item.url);
   pictureImg.setAttribute('alt', item.description);
   picture.addEventListener("click", showFullScreenImage);

@@ -4,7 +4,9 @@ import {getRndInteger} from './tools.js';
 let photoId = 1;
 let commentId = 1;
 
-export function generateData(){
+export const data = generateData();
+
+function generateData(){
 
   const res = [];
   for(let i = 1; i <= 25; i++){
