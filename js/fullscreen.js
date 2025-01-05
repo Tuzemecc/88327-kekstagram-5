@@ -30,8 +30,7 @@ function closeFullScreenImage(){
   docBody.classList.remove('modal-open');
 }
 
-
-function showComments(comments){  
+function showComments(comments){
   comments.forEach(comment => {
     const commentItem = bigPictureCommentTemplate.cloneNode(true);
     commentItem.querySelector('.social__picture').setAttribute('src', comment.avatar);
