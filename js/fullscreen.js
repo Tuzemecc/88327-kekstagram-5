@@ -18,8 +18,8 @@ export function showFullScreenImage(){
 
   bigPicture.querySelector('.big-picture .big-picture__cancel').addEventListener('click', closeFullScreenImage, {once: true});
   document.addEventListener('keydown', (evt) =>{
-    if ( evt.key !== 'Escape'){
-        return;
+    if (evt.key !== 'Escape'){
+      return;
     }
     closeFullScreenImage();
   });
