@@ -17,7 +17,12 @@ export function showFullScreenImage(){
   docBody.classList.add('modal-open');
 
   bigPicture.querySelector('.big-picture .big-picture__cancel').addEventListener('click', closeFullScreenImage, {once: true});
-  document.addEventListener('keydown', closeFullScreenImage, {once: true});
+  document.addEventListener('keydown', (evt) =>{
+    if ( evt.key !== 'Escape'){
+        return;
+    }
+    closeFullScreenImage();
+  });
 
   bigPicture.classList.remove('hidden');
 
